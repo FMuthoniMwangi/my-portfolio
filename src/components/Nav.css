@@ -1,8 +1,46 @@
-navbarScroll {
+.navbar-collapse {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .left-links {
     display: flex;
-    align-items: center; 
-    justify-content: space-between; 
-    padding: 10px 20px; 
-    background-color: #fff; 
+    gap: 30px;
+  }
+  
+  .right-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .social-icon a {
+    margin-right: 10px;
+    color: inherit;
+  }
+  
+  .connect-button {
+    background-color: #3b82f6; /* nice blue */
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+  }
+  
+  .search-form input {
+    height: 35px;
+    border-radius: 20px;
+    padding: 5px 15px;
+  }
+  
+  @media (max-width: 992px) {
+    .navbar-collapse {
+      flex-direction: column;
+    }
+    .right-actions {
+      margin-top: 10px;
+    }
   }
   

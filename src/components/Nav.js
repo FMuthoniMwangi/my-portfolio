@@ -33,13 +33,16 @@ function NavBar() {
           <FontAwesomeIcon icon={faCode} />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          <Nav>
+        <Navbar.Collapse id="navbarScroll" className="justify-content-between">
+          {/* Left side */}
+          <Nav className="left-links">
             <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#projects">Projects</Nav.Link>
-            <Nav.Link href="#resume">Resume</Nav.Link>
+            <Nav.Link href="#Projects">Projects</Nav.Link>
+            <Nav.Link href="#Resume">Resume</Nav.Link>
           </Nav>
-          <span className="navbar-text">
+
+          {/* Right side */}
+          <div className="right-actions">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/faith-mwangi-0268a2255">
                 <FontAwesomeIcon icon={faLinkedin} size="lg" />
@@ -48,20 +51,19 @@ function NavBar() {
                 <FontAwesomeIcon icon={faGithub} size="lg" />
               </a>
             </div>
-            <Button className="connect-button">Let's Connect!</Button>
-          </span>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+            <Button className="connect-button" as="a" href="#ContactMe">Let's Connect!</Button>
+            <Form className="search-form">
+              <Form.Control
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </Form>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
+
   );
 }
 
